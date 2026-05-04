@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enlace 194 - CBTis No. 194</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <nav class="bg-blue-900 text-white p-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold italic">ENLACE 194</h1>
+            <ul class="flex gap-6">
+                <li><a href="#inicio" class="hover:text-yellow-400">Inicio</a></li>
+                <li><a href="#diagnostico" class="hover:text-yellow-400">Diagnóstico</a></li>
+                <li><a href="#protocolo" class="hover:text-yellow-400">Protocolo</a></li>
+                <li><a href="#registro" class="bg-yellow-500 px-4 py-2 rounded text-blue-900 font-bold">Registro</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="inicio" class="bg-blue-800 text-white py-20 px-6 text-center">
+        <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Sistema Digital de Retención Estudiantil</h2>
+        <p class="text-xl max-w-2xl mx-auto opacity-90">Automatizando la detección de riesgos para disminuir la deserción en el CBTis 194.</p>
+    </header>
+
+    <main class="container mx-auto my-12 px-4">
+        
+        <section id="diagnostico" class="grid md:grid-cols-2 gap-12 mb-20">
+            <div>
+                <h3 class="text-3xl font-bold mb-4 text-blue-900 border-b-4 border-yellow-500 inline-block">Factores de Riesgo</h3>
+                <p class="mb-4 text-gray-600">El proyecto "Enlace 194" ataca los principales obstáculos para la permanencia escolar:</p>
+                <ul class="space-y-3">
+                    <li class="flex items-center gap-2">✅ <strong>Académicos:</strong> Combate la reprobación con tutorías.</li>
+                    <li class="flex items-center gap-2">✅ <strong>Económicos:</strong> Centraliza información de apoyos financieros y becas.</li>
+                    <li class="flex items-center gap-2">✅ <strong>Personales:</strong> Canal directo con psicólogos del plantel.</li>
+                </ul>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md border-l-8 border-red-500">
+                <h4 class="text-xl font-bold mb-2 text-red-700">Indicadores de Abandono</h4>
+                <p class="text-sm text-gray-600 mb-4">Datos relevantes del CBTis 194 y DGETI:</p>
+                <ul class="list-disc ml-5 space-y-1 text-gray-700">
+                    <li>Tasa de abandono promedio entre 13% y 15.5%.</li>
+                    <li>El reto principal es el tránsito del 2do al 3er semestre.</li>
+                    <li>Eficiencia terminal estimada entre el 65% y 70%.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="protocolo" class="mb-20 bg-blue-50 p-8 rounded-2xl border border-blue-100">
+            <h3 class="text-2xl font-bold mb-6 text-blue-900 text-center">Protocolo de Ejecución de la App</h3>
+            <div class="grid md:grid-cols-4 gap-4 text-center">
+                <div class="p-4">
+                    <div class="text-3xl mb-2">🔍</div>
+                    <h5 class="font-bold">Detección</h5>
+                    <p class="text-sm">El sistema lee inasistencias del docente.</p>
+                </div>
+                <div class="p-4">
+                    <div class="text-3xl mb-2">📱</div>
+                    <h5 class="font-bold">Notificación</h5>
+                    <p class="text-sm">Mensaje Push: "Te extrañamos en clase".</p>
+                </div>
+                <div class="p-4">
+                    <div class="text-3xl mb-2">🗓️</div>
+                    <h5 class="font-bold">Cita</h5>
+                    <p class="text-sm">Si no hay respuesta en 48h, se genera cita con el tutor.</p>
+                </div>
+                <div class="p-4">
+                    <div class="text-3xl mb-2">🤝</div>
+                    <h5 class="font-bold">Acción</h5>
+                    <p class="text-sm">Vinculación con becas o asesorías.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="registro" class="max-w-4xl mx-auto bg-white p-10 rounded-3xl shadow-2xl border border-gray-100">
+    <h3 class="text-2xl font-bold mb-2 text-center text-blue-900">Gestión de Alertas</h3>
+    
+    <form id="studentForm" class="space-y-4 mb-10">
+        <input type="hidden" id="studentId"> <div>
+            <label class="block font-semibold text-gray-700">Nombre del Estudiante</label>
+            <input type="text" id="nombre" class="w-full border p-3 rounded-lg focus:ring-2 focus:ring-blue-500" required>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+            <div>
+                <label class="block font-semibold text-gray-700">Promedio</label>
+                <input type="number" step="0.1" id="promedio" class="w-full border p-3 rounded-lg" required>
+            </div>
+            <div>
+                <label class="block font-semibold text-gray-700">Faltas</label>
+                <input type="number" id="faltas" class="w-full border p-3 rounded-lg" required>
+            </div>
+        </div>
+        <div class="flex gap-2">
+            <button type="submit" id="btnSubmit" class="flex-1 bg-blue-600 text-white font-bold py-4 rounded-xl hover:bg-blue-700 transition">
+                Guardar Registro
+            </button>
+            <button type="button" onclick="resetForm()" class="bg-gray-400 text-white px-6 rounded-xl">Limpiar</button>
+        </div>
+    </form>
+
+    <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse">
+            <thead>
+                <tr class="bg-gray-100">
+                    <th class="p-3">Nombre</th>
+                    <th class="p-3">Promedio</th>
+                    <th class="p-3">Faltas</th>
+                    <th class="p-3">Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="listaEstudiantes">
+                </tbody>
+        </table>
+    </div>
+</section>
+
+<script>
+    const API_URL = 'http://localhost:3000/api/estudiantes';
+
+    // Cargar datos al iniciar
+    window.onload = cargarEstudiantes;
+
+    async function cargarEstudiantes() {
+        const res = await fetch(API_URL);
+        const estudiantes = await res.json();
+        const tabla = document.getElementById('listaEstudiantes');
+        tabla.innerHTML = '';
+        
+        estudiantes.forEach(est => {
+            tabla.innerHTML += `
+                <tr class="border-b">
+                    <td class="p-3">${est.nombre}</td>
+                    <td class="p-3">${est.promedio}</td>
+                    <td class="p-3">${est.faltas}</td>
+                    <td class="p-3">
+                        <button onclick="prepararEdicion('${est._id}', '${est.nombre}', ${est.promedio}, ${est.faltas})" class="text-blue-600 font-bold">Editar</button>
+                    </td>
+                </tr>
+            `;
+        });
+    }
+
+    function prepararEdicion(id, nombre, promedio, faltas) {
+        document.getElementById('studentId').value = id;
+        document.getElementById('nombre').value = nombre;
+        document.getElementById('promedio').value = promedio;
+        document.getElementById('faltas').value = faltas;
+        document.getElementById('btnSubmit').innerText = "Actualizar Registro";
+        document.getElementById('btnSubmit').classList.replace('bg-blue-600', 'bg-green-600');
+    }
+
+    function resetForm() {
+        document.getElementById('studentForm').reset();
+        document.getElementById('studentId').value = '';
+        document.getElementById('btnSubmit').innerText = "Guardar Registro";
+        document.getElementById('btnSubmit').classList.replace('bg-green-600', 'bg-blue-600');
+    }
+
+    document.getElementById('studentForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const data = {
+            id: document.getElementById('studentId').value,
+            nombre: document.getElementById('nombre').value,
+            promedio: parseFloat(document.getElementById('promedio').value),
+            faltas: parseInt(document.getElementById('faltas').value)
+        };
+
+        try {
+            const response = await fetch(API_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+            if(response.ok) {
+                alert('Operación exitosa');
+                resetForm();
+                cargarEstudiantes();
+            }
+        } catch (err) {
+            alert('Error al conectar con Node.js');
+        }
+    });
+</script>
